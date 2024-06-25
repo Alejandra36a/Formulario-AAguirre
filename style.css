@@ -1,6 +1,21 @@
-.titulo{
+.titulo {
     background-color: lightgray;
+
 }
-.alert{
+
+.alert {
     background-color: lightcoral;
+}
+
+.contenedor {
+    margin: 0 auto  ;
+    border-radius: 0.5%;
+    border: 2px solid gray;
+    height: 650px;
+    width: 1200px;
+
+}
+
+.fondo {
+    display: center;
 }
