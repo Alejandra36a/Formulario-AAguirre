@@ -1,17 +1,25 @@
 .titulo {
     background-color: lightgray;
-
+    height: 50px;
+}
+h4{
+  padding-left: 2%;
 }
 
 .alert {
-    background-color: lightcoral;
+    background-color: rgb(218, 166, 166);
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color:firebrick;
 }
 
 .contenedor {
     margin: 0 auto  ;
     border-radius: 0.5%;
     border: 2px solid gray;
-    height: 650px;
+   
     width: 1200px;
 
 }
@@ -19,3 +27,6 @@
 .fondo {
     display: center;
 }
+.final {
+    background-color: lightgray;
+    height: 50px;
