@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="fondo">
+    <div class="container-fluid mt-5">
         <div class="contenedor">
             <div class="titulo ">
                 <h4>Payment form example</h4>
@@ -23,54 +23,62 @@
                 Some fields are missing
             </div>
             <div class="  datos-card ">
-                <div class="row ">
-                    <div class="col-2 ">
-                        <label for="recipient-name" class="col-form-label">Card #</label>
-                        <input type="text" value="XXXX-XXXX-XXXX-XXXX" />
+                <form class="row g-3 p-2 " >
+                    <div class="col-md-6 position-relative">
+                        <label for="validationTooltip01" class="form-label">Card #</label>
+                        <input type="text" class="form-control" id="validationTooltip01" value="XXXX-XXXX-XXXX-XXXX" required>
+                        
+                      </div>
+                      <div class="col-md-3 position-relative">
+                        <label for="validationTooltip02" class="form-label">CVC #</label>
+                        <input type="text" class="form-control" id="validationTooltip02" value="000" required>
+                        
+                      </div>
+                      <div class="col-md-3 position-relative">
+                        <label for="validationTooltipUsername" class="form-label">Amount</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="validationTooltipUsernamePrepend">$</span>
+                          <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend"  value="Amount"required>
+                          
+                        </div>
+                      </div>
+                    <div class="col-md-6">
+                      <label for="validationCustom01" class="form-label">First name</label>
+                      <input type="text" class="form-control" id="validationCustom01" value=" " required>
+                      
                     </div>
-                    <div class="col-2 ">
-                        <label for="recipient-name" class="col-form-label">CVC #</label>
-                        <input type="text" value="000" />
+                    <div class="col-md-6">
+                      <label for="validationCustom02" class="form-label">Last name</label>
+                      <input type="text" class="form-control" id="validationCustom02" value=" " required>
+                      
                     </div>
-                    <div class=" col-2 ">
-                        <label for="recipient-name" class="col-form-label">Amount $</label>
-                        <input type="text" value="" />
+
+                    <div class="col-md-6">
+                      <label for="validationCustom03" class="form-label">City</label>
+                      <input type="text" class="form-control" id="validationCustom03" required>
+                      
                     </div>
-                </div>
-            </div>
-            <div class=" row dates person ">
-                <div class="col-5 ">
-                    <label for="recipient-name" class="col-form-label">First Name</label>
-                    <input type="text" value=" " />
-                </div>
-                <div class="col-5">
-                    <label for="recipient-name" class="col-form-label">Last Name</label>
-                    <input type="text" value=" " />
-                </div>
-            </div>
-            <div class=" row justify-content-between">
-                <div class="col-3">
-                    <label for="recipient-name" class="col-form-label">City</label>
-                    <input type="text" value=" " />
-                </div>
-                <div class="col-2">
-                    <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
-                        <option selected>Pick a state</option>
-                        <option value="1">Andalucia</option>
-                        <option value="2">Alicante</option>
-                        <option value="3">Barcelona</option>
-                    </select>
-                </div>
-                <div class=" col-2 code">
-                    <label for="recipient-name" class="col-form-label">Postal Code</label>
-                    <input type="text" value=" " />
-                </div>
-            </div>
-            <div class="Message-acept">
+                    <div class="col-md-3">
+                      <label for="validationCustom04" class="form-label">State</label>
+                      <select class="form-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Andalucia</option>
+                        <option>Cataluña</option>
+                        <option>C.de Madrid</option>
+                      </select>
+                      
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationCustom05" class="form-label">Postal Code</label>
+                      <input type="text" class="form-control" id="validationCustom05" required>
+                      
+                    </div>
+                </form>
+            <div class="Message-acept p-2">
                 <p><strong>We accept: </strong></p>
             </div>
-            <div class="contendor-city justify-content-between">
-                <div class="Credit-card form-check">
+            <div class="contendor-fluid d-flex ">
+                <div class=" col-md-6 Credit-card form-check p-2 ">
                     <div class="form-check form-check-inline">
                         <label class="form-check-label" for="flexRadioDefault1">
                             <i class="fa-brands fa-cc-mastercard"></i>
@@ -89,12 +97,6 @@
                         </label>
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                     </div>
-
-                    <div class="contenedor-texto">
-                        <label for="recipient-name" class="col-form-label">Mesage</label>
-                        <textarea class="w-100 p-3" placeholder=" "></textarea>
-
-                    </div>
                     <div class="form-check form-check-inline">
                         <label class="form-check-label" for="flexRadioDefault1">
                             <i class="fa-brands fa-cc-amex"></i>
@@ -102,19 +104,27 @@
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                     </div>
                 </div>
-                <div class="final">
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
-                        <button class="btn btn-primary" type="button">Send</button>
-                    </div>
+                <div class=" col-md-6 contenedor-texto d-grid">
+                    <label for="recipient-name" class="col-form-label">Message</label>
+                    <textarea class=" p-3" placeholder=" "></textarea>
+                    <p>Add any notes here.</p>
                 </div>
-
+            </div>
+            
+        <div class="final">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
+                <button class="btn btn-primary" type="button">Send</button>
             </div>
         </div>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-            </script>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
